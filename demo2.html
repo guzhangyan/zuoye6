@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询2</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .bg{
+            display: flex;
+            margin: 0 auto;
+            width: 84%;
+        }
+        .bg>div{
+            height:60px;
+            color:white;
+            display: flex;
+            justify-content: center;
+            line-height: 60px;
+        }
+        .rd{
+            background:red;
+        }
+        .be{
+            background:blue;
+        }
+        .bk{
+            background:black;
+        }
+        .oe{  
+            background:orange;
+        }
+        @media screen and (min-width:1200px) {
+            .bg>div{
+                flex-grow: 1;
+            }   
+        }
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .bg{
+                flex-wrap: wrap;
+            }
+            .rd{
+                width:100%;
+                flex-grow: 3;
+            }
+            .be,.bk,.oe{
+                flex-grow: 1;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:992px) {
+            .bg{
+                flex-wrap: wrap;
+            }
+            .rd,.be{
+                flex-grow: 1;
+                width: 50%;
+            }
+            .bk,.oe{
+                flex-grow:1 ;
+            }    
+        }
+        @media screen and (max-width:768px) {
+            .bg{
+                flex-direction:column;
+            }
+            .bg>div{
+                width:100%;
+            }   
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="rd">1</div>
+        <div class="be">2</div>
+        <div class="bk">3</div>
+        <div class="oe">4</div>
+    </div>    
+</body>
+<script>
+</script>  
+</html>
